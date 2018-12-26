@@ -1,0 +1,37 @@
+{% extends "my_page/wrapper.html" %}
+
+{% block content %}
+
+
+<h1> <strong> {{ course_name }} </strong> </h1>
+<br>
+<br>
+    {% for data in course_inside %}
+        {% if data|length > 1 %}
+            <div class="container-fluid text-left data-list">
+                <ul>
+
+                    <h3> {{ data.0 }} </h3>
+
+                {% for link in data %}
+                    {% if link|length == 2 %}
+                        <li >
+                        <a href="#"> {{ link.0 }} </a>
+                            <br>
+                            </li>
+
+                    {% else %}
+
+                    {{ continue }}
+
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+            <br>
+
+        {% else %}
+
+        {% endif %}
+    {% endfor %}
+{% endblock %}

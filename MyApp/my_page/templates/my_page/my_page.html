@@ -1,0 +1,18 @@
+{% extends "my_page/wrapper.html" %}
+
+{% block content %}
+<br>
+<h1> <strong> Мои Курсы </strong> </h1>
+<br>
+<br>
+
+    {% for course in course_list %}
+       <a href="course_id={{ course.0 }}" class="course_link">
+        <div id="lable">
+
+            <p>{{ course.1 }}</p>
+
+        </div>
+        </a>
+    {% endfor %}
+{% endblock %}

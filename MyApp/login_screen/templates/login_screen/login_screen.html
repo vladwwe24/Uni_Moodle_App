@@ -1,0 +1,17 @@
+{% extends "login_screen/wrapper.html" %}
+
+{% block content %}
+<form action="/my_page/" id="login" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <div id="input">
+            <br />
+            <p>Ваш логін: <br /><input type="text" class="p_input brdr" maxlength="20" name="login" required></p>
+            <br />
+            <p>Пароль: <br /><input type="password" class="p_input brdr" maxlength="20" name="password" required></p>
+            <br />
+            <button type="submit" class="btn btn-default btn-lg brdr">Увійти</button>
+        </div>
+    </fieldset>
+</form>
+{% endblock %}
